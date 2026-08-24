@@ -67,7 +67,6 @@ document.getElementById("divideButton").onclick = function() {
     document.getElementById("result").textContent = result;
 };
 
-
 document.getElementById("clearButton").onclick = function() {
 
     document.getElementById("number1").value="";
