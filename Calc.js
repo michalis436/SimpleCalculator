@@ -24,10 +24,23 @@ function subtract(number1, number2){
 
 }
 
+function getNumber(input) {
+
+    if (input === "π" || input === "pi" || input === "Pi") {
+        return Math.PI;
+    }
+
+    if(input === "e"){
+        return Math.E;
+    }
+
+    return Number(input);
+}
+
 document.getElementById("additionButton").onclick = function(){
 
-    let number1 = Number(document.getElementById("number1").value);
-    let number2 = Number(document.getElementById("number2").value);
+    let number1 = getNumber(document.getElementById("number1").value);
+    let number2 = getNumber(document.getElementById("number2").value);
 
     let result = add(number1,number2);
 
@@ -37,8 +50,8 @@ document.getElementById("additionButton").onclick = function(){
 
 document.getElementById("subtractButton").onclick = function(){
 
-    let number1 = Number(document.getElementById("number1").value);
-    let number2 = Number(document.getElementById("number2").value);
+    let number1 = getNumber(document.getElementById("number1").value);
+    let number2 = getNumber(document.getElementById("number2").value);
 
     let result = subtract(number1,number2);
 
@@ -48,8 +61,8 @@ document.getElementById("subtractButton").onclick = function(){
 
 document.getElementById("multiplyButton").onclick = function() {
 
-    let number1 = Number(document.getElementById("number1").value);
-    let number2 = Number(document.getElementById("number2").value);
+    let number1 = getNumber(document.getElementById("number1").value);
+    let number2 = getNumber(document.getElementById("number2").value);
 
     let result = multiply(number1, number2);
 
@@ -59,8 +72,8 @@ document.getElementById("multiplyButton").onclick = function() {
 
 document.getElementById("divideButton").onclick = function() {
 
-    let number1 = Number(document.getElementById("number1").value);
-    let number2 = Number(document.getElementById("number2").value);
+    let number1 = getNumber(document.getElementById("number1").value);
+    let number2 = getNumber(document.getElementById("number2").value);
 
     let result = divide(number1, number2);
 
@@ -74,3 +87,37 @@ document.getElementById("clearButton").onclick = function() {
     document.getElementById("result").textContent="";
 
 };
+
+let selectedInput = null;
+
+document.getElementById("number1").onfocus = function() {
+
+    selectedInput = this;
+
+};
+
+document.getElementById("number2").onfocus = function() {
+
+    selectedInput = this;
+
+};
+
+document.getElementById("piButton").onclick = function() {
+
+    if (selectedInput != null) {
+
+        selectedInput.value = "π";
+
+    }
+
+};
+
+document.getElementById("eButton").onclick = function() {
+
+     if(selectedInput != null){
+
+        selectedInput.value = "e";
+
+    }
+
+}
