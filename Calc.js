@@ -37,6 +37,23 @@ function getNumber(input) {
     return Number(input);
 }
 
+function pow(number1, number2){
+
+    return Math.pow(number1,number2);
+
+}
+
+document.getElementById("powButton").onclick = function() {
+
+    let number1 = getNumber(document.getElementById("number1").value);
+    let number2 = getNumber(document.getElementById("number2").value);
+
+    let result = pow(number1,number2);
+
+    document.getElementById("result").textContent = result;
+
+};
+
 document.getElementById("additionButton").onclick = function(){
 
     let number1 = getNumber(document.getElementById("number1").value);
