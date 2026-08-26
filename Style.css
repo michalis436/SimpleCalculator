@@ -63,14 +63,11 @@ label {
         align-items: center;
     }
 
-}
-
-@media (max-width: 600px) {
-
-    .Calculate {
+     .Calculate {
         width: 120px;
         height: 60px;
         font-size: 18px;
     }
 
 }
+
