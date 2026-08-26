@@ -54,3 +54,23 @@ label {
     font-size: larger;
 
 }
+
+@media (max-width: 600px) {
+
+    .input-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .Calculate {
+        width: 120px;
+        height: 60px;
+        font-size: 18px;
+    }
+
+}
