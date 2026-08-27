@@ -1,6 +1,6 @@
 body {
 
-    background-color: lightblue;
+    background-color: lightskyblue;
     text-align: center;
 }
 
@@ -20,6 +20,7 @@ h1 {
     height: 50px;
     text-align: center;
     font-size: large;
+    cursor: pointer;
 
 }
 
@@ -28,8 +29,7 @@ h1 {
     background-color: lightcoral;
     font-style: italic;
     font-weight: bold;
-    text-align: center;
-    cursor: pointer;
+
 }
 
 p {
@@ -95,7 +95,13 @@ label {
 
 #clearButton {
 
-    color: lightgray;
+    background-color: lightgray;
+
+}
+
+#clearButton:hover {
+
+    background-color: lightcoral;
 
 }
 
