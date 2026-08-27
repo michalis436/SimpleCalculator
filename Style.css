@@ -75,6 +75,14 @@ label {
 
      }
 
+     .input-container input {
+
+        width: 300px;
+        height: 40px;
+        box-sizing: border-box;
+
+     }
+
      .Calculate {
 
         width: 120px;
